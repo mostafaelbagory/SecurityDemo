@@ -1,0 +1,35 @@
+﻿@page
+@model SecurityDemo.Pages.Account.LoginModel
+@{
+}
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Credencial.UserName"></label>
+            </div>
+            <div class="col-5">
+                <input class="form-control" type="text" asp-for="Credencial.UserName" />
+            </div>
+            <span asp-validation-for="Credencial.UserName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Credencial.Password"></label>
+            </div>
+            <div class="col-5">
+                <input class="form-control" type="password" asp-for="Credencial.Password" />
+                <span asp-validation-for="Credencial.Password" class="text-danger"></span>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Login" />
+            </div>
+
+        </div>
+    </form>
+</div>
